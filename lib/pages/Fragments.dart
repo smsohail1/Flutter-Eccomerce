@@ -1,6 +1,7 @@
 import 'package:eccomerceflutter/pages/home_fragment.dart';
 import 'package:eccomerceflutter/pages/favorite_fragment.dart';
 import 'package:eccomerceflutter/pages/all_category_fragment.dart';
+import 'package:eccomerceflutter/pages/about_fragment.dart';
 
 import 'package:flutter/material.dart';
 
@@ -53,30 +54,9 @@ class AllCatrogory extends StatelessWidget {
 }
 
 //Create Galaxies Fragment. This will contains a gridview with our galaxies
-class Galaxies extends StatelessWidget {
+class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var galaxies = [
-      "Messier 87",
-      "Andromeda",
-      "Sombrero",
-      "Whirlpool",
-      "Pinwheel",
-      "Milky Way",
-      "Cartwheel",
-      "Black Eye Galaxy",
-      "Star Bust",
-      "Centaurus",
-      "Triangulum",
-      "Sunflower",
-      "Caldwell",
-      "Tadpole",
-      "Hoag's Object",
-      "Mallin 1",
-      "NGC 262",
-      "IC 1101"
-    ];
-
-    return createGridView(context, galaxies);
+    return AboutFragment();
   }
 }

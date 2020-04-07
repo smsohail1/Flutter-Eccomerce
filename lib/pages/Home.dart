@@ -1,5 +1,6 @@
 import 'Fragments.dart' as Fragments;
 import 'package:flutter/material.dart';
+import 'package:eccomerceflutter/cart_page/cart.dart';
 
 //Let's define a DrawerItem data object
 class DrawerItem {
@@ -11,6 +12,7 @@ class DrawerItem {
 
 // Our Homepage
 class HomePage extends StatefulWidget {
+
   //Let's define our drawer items, strings and images
   final drawerItems = [
     new DrawerItem("Home", Icons.home),
@@ -42,7 +44,11 @@ class HomePageState extends State<HomePage> {
       case 2:
         return new Fragments.AllCatrogory();
       case 3:
-        return new Fragments.Galaxies();
+       // return new Fragments.Galaxies();
+      case 4:
+        //return new Fragments.Galaxies();
+      case 5:
+        return new Fragments.About();
 
       default:
         return new Text("Error");
@@ -58,6 +64,8 @@ class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+
     List<Widget> drawerOptions = [];
     //Let's create drawer list items. Each will have an icon and text
     for (var i = 0; i < widget.drawerItems.length; i++) {
@@ -74,6 +82,72 @@ class HomePageState extends State<HomePage> {
       appBar: new AppBar(
         // We will dynamically display title of selected page
         title: new Text(widget.drawerItems[_selectedDrawerIndex].title),
+
+        actions: <Widget>[
+
+          new Padding(padding: const EdgeInsets.all(10.0),
+
+            child: new Container(
+                height: 150.0,
+                width: 30.0,
+                child: new GestureDetector(
+                  onTap: () {
+//                    Navigator.of(context).push(
+//                        new MaterialPageRoute(
+//                            builder:(BuildContext context) =>
+//                            new CartItemsScreen()
+//                        )
+//                    );
+                  },
+
+                  child: new Stack(
+
+                    children: <Widget>[
+                      new IconButton(icon: new Icon(Icons.shopping_cart,
+                        color: Colors.white,),
+                        onPressed: (){
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Cart()),
+                          );
+                        },
+                      ),
+//                      1 ==0 ? new Container(
+//
+//                      ) :
+//                      new Positioned(
+//
+//                          child: new Stack(
+//                            children: <Widget>[
+//                              new Icon(
+//                                  Icons.brightness_1,
+//                                  size: 20.0, color: Colors.green[800]),
+//                              new Positioned(
+//                                  top: 3.0,
+//                                  right: 4.0,
+//                                  child: new Center(
+//                                    child: new Text('1',
+//
+//                                      style: new TextStyle(
+//                                          color: Colors.white,
+//                                          fontSize: 11.0,
+//                                          fontWeight: FontWeight.w500
+//                                      ),
+//                                    ),
+//                                  )),
+//
+//
+//                            ],
+//                          )),
+
+                    ],
+                  ),
+                )
+            )
+
+            ,)],
+
       ),
       // Let's register our Drawer to the Scaffold
       drawer: new Drawer(

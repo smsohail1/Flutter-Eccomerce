@@ -9,6 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        // Define the default brightness and colors.
+        brightness: Brightness.light,
+        primaryColor: Color(0xffed1a37),
+        accentColor: Color(0xffed1a37),
+      ),
       debugShowCheckedModeBanner: false,
 
       title: 'Flutter Demo',

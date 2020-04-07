@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'home_fragment.dart';
-import 'package:eccomerceflutter/pages/home_products_detail.dart';
+import 'package:eccomerceflutter/product_detail/product_details.dart';
 
 class ChoiceCard extends StatelessWidget {
   const ChoiceCard({Key key, this.choice}) : super(key: key);
@@ -18,7 +18,7 @@ class ChoiceCard extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeProductsDetail()),
+                MaterialPageRoute(builder: (context) => ProductDetail()),
               );
             },
             child: Center(
