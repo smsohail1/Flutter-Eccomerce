@@ -1,6 +1,8 @@
 import 'Fragments.dart' as Fragments;
 import 'package:flutter/material.dart';
 import 'package:eccomerceflutter/cart_page/cart.dart';
+import 'package:eccomerceflutter/pages/rate_and_share_fragment.dart';
+import 'package:share/share.dart';
 
 //Let's define a DrawerItem data object
 class DrawerItem {
@@ -44,7 +46,8 @@ class HomePageState extends State<HomePage> {
       case 2:
         return new Fragments.AllCatrogory();
       case 3:
-       // return new Fragments.Galaxies();
+        Share.share('check out my website www.onlineapp.com', subject: 'Look what I made!');
+        return;
       case 4:
         //return new Fragments.Galaxies();
       case 5:

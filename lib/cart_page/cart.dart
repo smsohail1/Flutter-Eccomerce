@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:eccomerceflutter/pages/shipping_address_screen.dart';
 
 class Cart extends StatefulWidget {
   @override
@@ -93,7 +94,12 @@ class _CartState extends State<Cart> {
                             alignment: Alignment.centerRight,
                             child: RaisedButton(
                               padding: EdgeInsets.all(13.0),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => ShippingAddressScreen()),
+                                );
+                              },
                               child: const Text('Checkout',
                                   style: TextStyle(fontSize: 14)),
                               color: Colors.blue,

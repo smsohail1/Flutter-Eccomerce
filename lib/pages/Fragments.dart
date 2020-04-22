@@ -2,6 +2,7 @@ import 'package:eccomerceflutter/pages/home_fragment.dart';
 import 'package:eccomerceflutter/pages/favorite_fragment.dart';
 import 'package:eccomerceflutter/pages/all_category_fragment.dart';
 import 'package:eccomerceflutter/pages/about_fragment.dart';
+import 'package:eccomerceflutter/pages/rate_and_share_fragment.dart';
 
 import 'package:flutter/material.dart';
 
@@ -53,10 +54,17 @@ class AllCatrogory extends StatelessWidget {
   }
 }
 
-//Create Galaxies Fragment. This will contains a gridview with our galaxies
 class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AboutFragment();
+  }
+}
+
+
+class RateAndShare extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RateAndShareFragment();
   }
 }
